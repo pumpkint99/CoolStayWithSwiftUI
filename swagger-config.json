@@ -1,0 +1,311 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Diecasting data v1.0.0",
+        "description": "Spring boot를 이용한 Diecasting 웹 애플리케이션 API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "pumpkint99",
+            "email": "pumpkint99@sk.com"
+        },
+        "license": {
+            "name": "Apache License Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        },
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8080/inquery",
+            "description": "Generated server url"
+        }
+    ],
+    "tags": [
+        {
+            "name": "diecasting",
+            "description": "diecasting 데이터 API"
+        },
+        {
+            "name": "HealthCheck",
+            "description": "HealthCheck API"
+        },
+        {
+            "name": "diecasting",
+            "description": "diecasting 정보 API"
+        }
+    ],
+    "paths": {
+        "/v1/api/diecastingInfo/getDeviceInfoList": {
+            "get": {
+                "tags": [
+                    "diecasting"
+                ],
+                "operationId": "getDeviceInfoList",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "Basic aWtkX3Rlc3Q6aWtkQHB3"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/api/diecastingInfo/getDeviceIds": {
+            "get": {
+                "tags": [
+                    "diecasting"
+                ],
+                "operationId": "getDeviceIds",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "Basic aWtkX3Rlc3Q6aWtkQHB3"
+                        }
+                    },
+                    {
+                        "name": "castingId",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "IKD_F3_OPC1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/api/diecastingInfo/getClientUserList": {
+            "get": {
+                "tags": [
+                    "diecasting"
+                ],
+                "operationId": "getClientUserList",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "Basic aWtkX3Rlc3Q6aWtkQHB3"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/api/diecastingInfo/getClientInfoList": {
+            "get": {
+                "tags": [
+                    "diecasting"
+                ],
+                "operationId": "getClientInfoList",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "Basic aWtkX3Rlc3Q6aWtkQHB3"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/api/diecastingInfo/getCastingIds": {
+            "get": {
+                "tags": [
+                    "diecasting"
+                ],
+                "operationId": "getCastingIds",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "Basic aWtkX3Rlc3Q6aWtkQHB3"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/api/diecastingData/getDatas": {
+            "get": {
+                "tags": [
+                    "diecasting"
+                ],
+                "operationId": "getDatas",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "Basic aWtkX3Rlc3Q6aWtkQHB3"
+                        }
+                    },
+                    {
+                        "name": "pageNum",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "countPerPage",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 1000
+                        }
+                    },
+                    {
+                        "name": "castingId",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "IKD_F3_OPC1"
+                        }
+                    },
+                    {
+                        "name": "deviceId",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "IKD_F3_OPC1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/health-check/": {
+            "get": {
+                "tags": [
+                    "HealthCheck"
+                ],
+                "operationId": "health_check",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {}
+}
